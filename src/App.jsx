@@ -3,7 +3,6 @@ import Layout from './pages/Layout'
 import './App.css'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>

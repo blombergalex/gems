@@ -187,3 +187,6 @@ export const incenses = [
         "Approx. 45 minutes"
     )
 ];
+
+export const allProducts = [...crystals, ...essentialOils, ...incenses];
+export const productNames = allProducts.map((product => product.name));

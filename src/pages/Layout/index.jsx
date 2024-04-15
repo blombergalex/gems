@@ -1,7 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom"
 import { Menu } from 'lucide-react'
-import styles from './Layout.module.css'
 import { useState } from "react"
+import Sidebar from "../../components/Sidebar"
+import styles from './Layout.module.css'
 
 const Layout = () => {
 
@@ -20,6 +21,7 @@ const Layout = () => {
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
             </nav>
+        <Sidebar category={category}/> 
         <Outlet/>
         </>
     )
