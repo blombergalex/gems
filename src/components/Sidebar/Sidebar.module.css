@@ -4,11 +4,20 @@
     height: 100vh;
     padding: 8px;
 }
-.sidebarTitle {
-    color: var(--first-color);
-    text-transform: uppercase;
-}
 
 .category {
     text-transform: uppercase;
+    font-weight: 700;
+    color: var(--second-color)
+}
+
+.sidebar a,
+.sidebar a:visited {
+    text-decoration: none;
+}
+
+.sidebar p {
+    text-transform: capitalize;
+    padding: 2px 0;
+    color: var(--grey-color)
 }
