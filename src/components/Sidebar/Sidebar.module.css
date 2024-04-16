@@ -1,0 +1,14 @@
+.sidebar {
+    border: 0.5px solid var(--first-color);
+    width: max-content;
+    height: 100vh;
+    padding: 8px;
+}
+.sidebarTitle {
+    color: var(--first-color);
+    text-transform: uppercase;
+}
+
+.category {
+    text-transform: uppercase;
+}

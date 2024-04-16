@@ -1,51 +1,91 @@
 import { Link } from "react-router-dom";
 import { allProducts } from "../../data/data";
+import styles from './Sidebar.module.css'
 
 const Sidebar = ({category}) => {
 
-    const filteredProducts = allProducts.filter(product => product.category === category);
 
     return(
-        <div>
-            <h2>Products</h2>
+        <div className={styles.sidebar}>
+            <h3 className={styles.sidebarTitle}>Products</h3>
             <ul>
             {category === 'home' ? (
                 <>
                 <li>
-                    <h3>Crystals</h3>
+                    <Link to='crystals' className={styles.category}>Crystals</Link>
                     <ul>
                     {allProducts.filter(product => product.category === 'crystal').map(product => (
                         <li key={product.name}>
-                        <Link to={`/product/${product.name}`}>{product.name}</Link>
+                        <p>{product.name}</p>
                         </li>
                     ))}
                     </ul>
                 </li>
                 <li>
-                    <h3 >Essential Oils</h3>
+                    <Link to='essentialoils'>Essential Oils</Link>
                     <ul>
                     {allProducts.filter(product => product.category === 'essential oil').map(product => (
                         <li key={product.name}>
-                        <Link to={`/product/${product.name}`}>{product.name}</Link>
+                        <p to={`/product/${product.name}`}>{product.name}</p>
                         </li>
                     ))}
                     </ul>
                 </li>
                 <li>
-                    <h3>Incenses</h3>
+                    <Link to='incenses'>Incenses</Link>
                     <ul>
                     {allProducts.filter(product => product.category === 'incense').map(product => (
                         <li key={product.name}>
-                        <Link to={`/product/${product.name}`}>{product.name}</Link>
+                        <p to={`/product/${product.name}`}>{product.name}</p>
                         </li>
                     ))}
                     </ul>
                 </li>
                 </>
-            ) : null}
+            ) 
+            
+            : category === 'crystals' ? (
+                <li>
+                    <Link to='crystals'>Crystals</Link>
+                    <ul>
+                    {allProducts.filter(product => product.category === 'crystal').map(product => (
+                        <li key={product.name}>
+                        <p to={`/product/${product.name}`}>{product.name}</p>
+                        </li>
+                    ))}
+                    </ul>
+                </li>
+            ) 
+            : category === 'essentialoils' ? (
+                <li>
+                    <Link to='essentialoils'>Essential Oils</Link>
+                    <ul>
+                    {allProducts.filter(product => product.category === 'essential oil').map(product => (
+                        <li key={product.name}>
+                        <p to={`/product/${product.name}`}>{product.name}</p>
+                        </li>
+                    ))}
+                    </ul>
+                </li>
+            ) 
+            : category === 'incenses' ? (
+                <li>
+                    <Link to='incenses'>Incenses</Link>
+                    <ul>
+                    {allProducts.filter(product => product.category === 'incense').map(product => (
+                        <li key={product.name}>
+                        <p to={`/product/${product.name}`}>{product.name}</p>
+                        </li>
+                    ))}
+                    </ul>
+                </li>
+            ) 
+            : null }
             </ul>
         </div>
     );
   };
 
 export default Sidebar;
+
+
