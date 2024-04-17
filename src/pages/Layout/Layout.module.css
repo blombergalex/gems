@@ -1,6 +1,6 @@
 .navbar {
     height: min-content;
-    background-color: var(--second-color);
+    background-color: var(--main-color);
     display: flex;
     justify-content: flex-end;
 }
@@ -10,11 +10,17 @@
     color: #000;
     padding: 8px;
     text-decoration: none;
+    transition: color  0.5s;
 }
 
 .navbar a.active{
-    background-color: var(--second-color-darker);
+    background-color: var(--main-dark);
     border-radius: 2px;
+    color: #fff;
+    transition: background-color 1s ease-in-out;
+}
+
+.navbar a:hover{
     color: #fff;
 }
 

@@ -1,6 +1,6 @@
 .sidebar {
-    border: 0.5px solid var(--first-color);
-    width: max-content;
+    border: 0.5px solid var(--birght-purple-color);
+    width: 120px;
     height: 100vh;
     padding: 8px;
 }
@@ -8,7 +8,12 @@
 .category {
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--second-color)
+    color: var(--main-color);
+    transition: color  0.5s;
+}
+
+.category:hover {
+    color: var(--main-midi);
 }
 
 .sidebar a,
@@ -19,5 +24,11 @@
 .sidebar p {
     text-transform: capitalize;
     padding: 2px 0;
-    color: var(--grey-color)
+    color: var(--grey-color);
+    transition: color  0.5s;
+}
+
+.sidebar p:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }

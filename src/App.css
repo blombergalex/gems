@@ -1,8 +1,9 @@
 :root {
-  --first-color: #614c89;
-  --second-color: #c6c5c2;
-  --second-color-darker: #40374c;
-  --third-color: rgb(171, 211, 243);
+  --main-color: #c6c5c2;
+  --main-dark: #40374c;
+  --main-midi: #dbd9d7;
+  --birght-purple-color: #614c89;
+  --third-color: #abd3f3;
   --grey-color: #908f8f;
   font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
