@@ -1,34 +1,34 @@
 .sidebar {
-    border: 0.5px solid var(--birght-purple-color);
-    width: 120px;
-    height: 100vh;
-    padding: 8px;
+  border: 0.5px solid var(--bright-purple-color);
+  width: 120px;
+  height: 100vh;
+  padding: 8px;
 }
 
 .category {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--main-color);
-    transition: color  0.5s;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--main-color);
+  transition: color 0.5s;
 }
 
 .category:hover {
-    color: var(--main-midi);
+  color: var(--main-midi);
 }
 
 .sidebar a,
 .sidebar a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .sidebar p {
-    text-transform: capitalize;
-    padding: 2px 0;
-    color: var(--grey-color);
-    transition: color  0.5s;
+  text-transform: capitalize;
+  padding: 2px 0;
+  color: var(--grey-color);
+  transition: color 0.5s;
 }
 
 .sidebar p:hover {
-    color: var(--main-color);
-    cursor: pointer;
+  color: var(--main-color);
+  cursor: pointer;
 }

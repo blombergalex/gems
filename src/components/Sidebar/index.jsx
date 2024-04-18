@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { allProducts } from "../../data/data";
-import { useState } from "react";
 import styles from './Sidebar.module.css'
 
 const Sidebar = ({category, handleCategoryChange}) => {
@@ -51,16 +50,19 @@ const Sidebar = ({category, handleCategoryChange}) => {
                 <div>
                     <Link to='crystals' className={styles.category}>Crystals</Link>
                     <p>{crystalList()}</p>
+                    <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                 </div>
             ) : category === 'essentialoils' ? (
                 <div>
                     <Link to='essentialoils' className={styles.category}>Essential Oils</Link>
                     <p>{incenseList()}</p>
+                    <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                 </div>
             ) : category === 'incenses' ? (
                 <div>
                     <Link to='incenses' className={styles.category}>Incenses</Link>
                     <p>{essentialoilsList()}</p>
+                    <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                 </div>
             ) : null }
             </div>
