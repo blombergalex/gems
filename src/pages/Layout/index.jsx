@@ -10,7 +10,6 @@ const Layout = () => {
 
     const handleCategoryChange = useCallback((newCategory) => {
         setCategory(newCategory);
-        console.log(newCategory)
     }, []);
 
     return(

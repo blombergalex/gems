@@ -1,0 +1,21 @@
+.shortSummary {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.smallImage {
+    aspect-ratio: 1/1;
+    width: 70%;
+}
+
+@media screen and (min-width: 1240px) {
+    .shortSummary {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .smallImage {
+        width: 35%;
+    }
+}

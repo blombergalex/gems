@@ -1,4 +1,4 @@
-function Product(name, category, origin, price, shortDescription, longDescription, size) {
+function Product(name, category, origin, price, shortDescription, longDescription, size, image) {
     this.name = name;
     this.category = category;
     this.origin = origin;
@@ -6,6 +6,7 @@ function Product(name, category, origin, price, shortDescription, longDescriptio
     this.shortDescription = shortDescription;
     this.longDescription = longDescription;
     this.size = size;
+    this.image = image;
 }
 
 export const crystals = [
