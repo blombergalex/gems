@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import styles from './ShortSummary.module.css'
 
-const ShortSummary = ({product}) => {
+const ShortSummary = ({product, selectedProduct, setSelectedProduct, setShowDetailedPage}) => {
     console.log(`${product.name} is rendered`)
+
+    const handleReadMoreClick = () => {
+        setSelectedProduct(product);
+        setShowDetailedPage(true);
+    }
+
     return(
         <div className={styles.shortSummary}>
             <img src={product.image} alt={`Image of ${product.name}`} className={styles.smallImage}/>
@@ -12,7 +18,7 @@ const ShortSummary = ({product}) => {
                 <p>{product.price}</p>
                 <p>{product.origin}</p>
                 <p>{product.category}</p>
-                <Link to={`/product/${product.name}`}>Read more</Link>
+                <p onClick={handleReadMoreClick}>Read more</p>
             </div>
         </div> 
     )

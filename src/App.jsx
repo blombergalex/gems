@@ -6,14 +6,15 @@ import './App.css'
 
 function App() {
   const[selectedProduct, setSelectedProduct] = useState(null);
+  const [showDetailedPage, setShowDetailedPage] = useState(false);
   
   return (
     <>
       <Routes>
-        <Route path='/' element={ <Layout selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/> }>
-          <Route path='crystals' element={<DetailedPage/>} />
-          <Route path='essentialoils' element={<DetailedPage/>} />
-          <Route path='incenses' element={<DetailedPage/>}/>
+        <Route path='/' element={ <Layout selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} showDetailedPage={showDetailedPage} setShowDetailedPage={setShowDetailedPage}/> }>
+          <Route path='crystals' element={<DetailedPage product={selectedProduct}/>} />
+          <Route path='essentialoils' element={<DetailedPage product={selectedProduct}/>} />
+          <Route path='incenses' element={<DetailedPage product={selectedProduct}/>}/>
         </Route>
       </Routes>
     </>

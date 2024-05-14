@@ -1,7 +1,8 @@
+import styles from './DetailedPage.module.css'
 
 const DetailedPage = ({product}) => {
     return(
-        <div>
+        <div className={styles.detailedContainer}>
             <p>Detailed page</p>
             {/* <img src={product.image} alt={`Image of ${product.name}`}/>
             <div>

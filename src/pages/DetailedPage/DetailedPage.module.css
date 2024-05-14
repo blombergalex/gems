@@ -1,0 +1,6 @@
+.detailedContainer {
+    /* display: none; */
+    background-color: var(--main-dark);
+    color: #fff;
+    padding: 24px;
+}
