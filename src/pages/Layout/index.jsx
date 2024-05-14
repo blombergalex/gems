@@ -24,9 +24,11 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                     <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
                     <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
                 </nav>
-            <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct}/> 
+            <div className={styles.mainContent}>
+                <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct}/>
+                {selectedProduct && <ShortSummary product={selectedProduct}/> }
+            </div>
             <Outlet/>
-            {selectedProduct && <ShortSummary product={selectedProduct}/> }
         </>
     )
 }

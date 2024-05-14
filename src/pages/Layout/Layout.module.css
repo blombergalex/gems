@@ -28,6 +28,10 @@
     align-self: flex-end;
 }
 
+.mainContent {
+    display: flex;
+}
+
 @media screen and (min-width: 600px) {
     
     a:hover {
