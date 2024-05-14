@@ -12,7 +12,7 @@ function Product(name, category, origin, price, shortDescription, longDescriptio
 export const crystals = [
     new Product(
         "celestine",
-        "crystal",
+        "crystals",
         "Madagascar",
         "200", 
         "Promotes clarity of mind and communication.",
@@ -21,7 +21,7 @@ export const crystals = [
     ),
     new Product(
         "blue apatite",
-        "crystal",
+        "crystals",
         "Brazil",
         "150",
         "Enhances intuition and personal power.",
@@ -30,7 +30,7 @@ export const crystals = [
     ),
     new Product(
         "agate",
-        "crystal",
+        "crystals",
         "India",
         "100",
         "Brings stability and emotional balance.",
@@ -39,7 +39,7 @@ export const crystals = [
     ),
     new Product(
         "rose quartz",
-        "crystal",
+        "crystals",
         "Brazil",
         "180",
         "Promotes love, compassion, and emotional healing.",
@@ -48,7 +48,7 @@ export const crystals = [
     ),
     new Product(
         "rock crystal",
-        "crystal",
+        "crystals",
         "Brazil",
         "120",
         "Amplifies energy and promotes clarity.",
@@ -60,7 +60,7 @@ export const crystals = [
 export const essentialOils = [
     new Product(
         "lavender",
-        "essential oil",
+        "essentialoils",
         "France",
         "150", 
         "Calming and relaxing scent, great for stress relief.",
@@ -69,7 +69,7 @@ export const essentialOils = [
     ),
     new Product(
         "rosemary",
-        "essential oil",
+        "essentialoils",
         "Spain",
         "120",
         "Invigorating and stimulating scent, aids concentration.",
@@ -78,7 +78,7 @@ export const essentialOils = [
     ),
     new Product(
         "orange",
-        "essential oil",
+        "essentialoils",
         "Italy",
         "100",
         "Uplifting and refreshing citrus aroma, boosts mood.",
@@ -87,7 +87,7 @@ export const essentialOils = [
     ),
     new Product(
         "mint",
-        "essential oil",
+        "essentialoils",
         "USA",
         "130",
         "Cooling and refreshing scent, aids digestion.",
@@ -96,7 +96,7 @@ export const essentialOils = [
     ),
     new Product(
         "tea tree",
-        "essential oil",
+        "essentialoils",
         "Australia",
         "160",
         "Antimicrobial and purifying properties, supports skin health.",
@@ -105,7 +105,7 @@ export const essentialOils = [
     ),
     new Product(
         "lemon",
-        "essential oil",
+        "essentialoils",
         "Italy",
         "110",
         "Uplifting and energizing citrus scent, promotes detoxification.",
@@ -114,7 +114,7 @@ export const essentialOils = [
     ),
     new Product(
         "eucalyptus",
-        "essential oil",
+        "essentialoils",
         "Australia",
         "140",
         "Clears congestion and supports respiratory health.",
@@ -126,7 +126,7 @@ export const essentialOils = [
 export const incenses = [
     new Product(
         "yagra",
-        "incense",
+        "incenses",
         "India",
         "80", 
         "Balances energy and promotes relaxation.",
@@ -135,7 +135,7 @@ export const incenses = [
     ),
     new Product(
         "myrrh",
-        "incense",
+        "incenses",
         "Somalia",
         "100",
         "Purifies the air and uplifts the spirit.",
@@ -144,7 +144,7 @@ export const incenses = [
     ),
     new Product(
         "patchouli",
-        "incense",
+        "incenses",
         "Indonesia",
         "90",
         "Grounding and calming scent, enhances creativity.",
@@ -153,7 +153,7 @@ export const incenses = [
     ),
     new Product(
         "cedar",
-        "incense",
+        "incenses",
         "USA",
         "110",
         "Purifies the environment and promotes clarity.",
@@ -162,7 +162,7 @@ export const incenses = [
     ),
     new Product(
         "lily",
-        "incense",
+        "incenses",
         "Japan",
         "120",
         "Calming and soothing scent, promotes emotional balance.",
@@ -171,7 +171,7 @@ export const incenses = [
     ),
     new Product(
         "frankincense",
-        "incense",
+        "incenses",
         "Oman",
         "130",
         "Elevates consciousness and deepens spiritual connection.",
@@ -180,7 +180,7 @@ export const incenses = [
     ),
     new Product(
         "palo santo",
-        "incense",
+        "incenses",
         "Peru",
         "150",
         "Clears negative energy and promotes healing.",
