@@ -3,6 +3,7 @@ import { Menu } from 'lucide-react'
 import { useCallback, useState } from "react"
 import Sidebar from "../../components/Sidebar"
 import ShortSummary from "../../components/ShortSummary"
+import WelcomeMessage from "../../components/WelcomeMessage"
 import styles from './Layout.module.css'
 
 const Layout = ({selectedProduct, setSelectedProduct}) => {
@@ -11,10 +12,8 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     const handleCategoryChange = useCallback((newCategory) => {
         setCategory(newCategory);
-        console.log(newCategory)
+        setSelectedProduct(null);
     }, []);
-
-    console.log(selectedProduct)
 
     return(
         <>
@@ -27,7 +26,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                 </nav>
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct}/>
-                {selectedProduct && <ShortSummary product={selectedProduct}/> }
+                {selectedProduct ? (<ShortSummary product={selectedProduct}/> ) : (<WelcomeMessage category={category}/>)}
             </div>
             <Outlet/>
         </>
