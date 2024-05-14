@@ -5,9 +5,12 @@ import styles from './Sidebar.module.css'
 const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct}) => {
 
     const handleProductClick = (product) => {
-        if (selectedProduct === product) {
-            handleCategoryChange('home');
+        if (selectedProduct === product && category === product.category) {
+            handleCategoryChange(product.category);
             setSelectedProduct(null);
+        } else if (selectedProduct === product) {
+            setSelectedProduct(null);
+            handleCategoryChange(home);
         } else {
             setSelectedProduct(product);
         } 
@@ -56,19 +59,19 @@ const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedPr
                     </>
                 ) : category === 'crystals' ? (
                     <div>
-                        <Link to='crystals' className={styles.category}>Crystals</Link>
+                        <Link to='crystals' className={styles.category} onClick={() => handleCategoryChange('crystals')}>Crystals</Link>
                         <div>{crystalList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>
                 ) : category === 'essentialoils' ? (
                     <div>
-                        <Link to='essentialoils' className={styles.category}>Essential Oils</Link>
+                        <Link to='essentialoils' className={styles.category} onClick={() => handleCategoryChange('essentialoils')}>Essential Oils</Link>
                         <div>{incenseList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>
                 ) : category === 'incenses' ? (
                     <div>
-                        <Link to='incenses' className={styles.category}>Incenses</Link>
+                        <Link to='incenses' className={styles.category} onClick={() => handleCategoryChange('incenses')}>Incenses</Link>
                         <div>{essentialoilsList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>
