@@ -62,7 +62,7 @@ export const essentialOils = [
         "lavender",
         "essential oil",
         "France",
-        "150", // Price in SEK
+        "150", 
         "Calming and relaxing scent, great for stress relief.",
         "Lavender essential oil is renowned for its calming and relaxing properties. It promotes restful sleep, reduces stress and anxiety, and soothes the mind and body. Its gentle floral aroma makes it a popular choice for aromatherapy and natural healing practices.",
         "10 ml"

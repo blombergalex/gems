@@ -11,6 +11,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     const handleCategoryChange = useCallback((newCategory) => {
         setCategory(newCategory);
+        console.log(newCategory)
     }, []);
 
     console.log(selectedProduct)
@@ -25,7 +26,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                     <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
                 </nav>
             <div className={styles.mainContent}>
-                <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct}/>
+                <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct}/>
                 {selectedProduct && <ShortSummary product={selectedProduct}/> }
             </div>
             <Outlet/>

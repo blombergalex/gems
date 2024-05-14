@@ -2,11 +2,16 @@ import { Link, NavLink } from "react-router-dom";
 import { allProducts } from "../../data/data";
 import styles from './Sidebar.module.css'
 
-const Sidebar = ({category, handleCategoryChange, setSelectedProduct}) => {
+const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct}) => {
 
     const handleProductClick = (product) => {
-        setSelectedProduct(product);
-    }
+        if (selectedProduct === product) {
+            handleCategoryChange(product.category);
+            setSelectedProduct(null);
+        } else {
+            setSelectedProduct(product);
+        } 
+    };
 
     const crystalList = () => {
         return allProducts.filter(product => product.category === 'crystal').map(product => (
@@ -38,31 +43,31 @@ const Sidebar = ({category, handleCategoryChange, setSelectedProduct}) => {
             {category === 'home' ? (
                 <>
                 <div>
-                    <Link to='crystals' className={styles.category} onClick={() => handleCategoryChange('crystals')}>Crystals</Link>
+                    <Link to='crystals' className={styles.category} onClick={() => handleCategoryChange('crystal')}>Crystals</Link>
                     <div>{crystalList()}</div>
                 </div>
                 <div>
-                    <Link to='essentialoils' className={styles.category}  onClick={() => handleCategoryChange('essentialoils')}>Essential Oils</Link>
+                    <Link to='essentialoils' className={styles.category}  onClick={() => handleCategoryChange('essential oil')}>Essential Oils</Link>
                     <div>{essentialoilsList()}</div>
                 </div>
                 <div>
-                    <Link to='incenses' className={styles.category} onClick={() => handleCategoryChange('incenses')}>Incenses</Link>
+                    <Link to='incenses' className={styles.category} onClick={() => handleCategoryChange('incense')}>Incenses</Link>
                     <div>{incenseList()}</div>
                 </div>
                 </>
-            ) : category === 'crystals' ? (
+            ) : category === 'crystal' ? (
                 <div>
                     <Link to='crystals' className={styles.category}>Crystals</Link>
                     <div>{crystalList()}</div>
                     <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                 </div>
-            ) : category === 'essentialoils' ? (
+            ) : category === 'essential oil' ? (
                 <div>
                     <Link to='essentialoils' className={styles.category}>Essential Oils</Link>
                     <div>{incenseList()}</div>
                     <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                 </div>
-            ) : category === 'incenses' ? (
+            ) : category === 'incense' ? (
                 <div>
                     <Link to='incenses' className={styles.category}>Incenses</Link>
                     <div>{essentialoilsList()}</div>
