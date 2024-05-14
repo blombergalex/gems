@@ -10,6 +10,7 @@
   font-weight: 700;
   color: var(--main-color);
   transition: color 0.5s;
+  padding-top: 8px;
 }
 
 .category:hover {

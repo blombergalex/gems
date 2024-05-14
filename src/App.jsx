@@ -3,10 +3,11 @@ import Layout from './pages/Layout'
 import './App.css'
 
 function App() {
-
+  const[selectedProduct, setSelectedProduct] = useState(null);
+  
   return (
     <>
-      <Layout />
+      <Layout selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
     </>
   )
 }

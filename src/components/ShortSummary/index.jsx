@@ -4,7 +4,7 @@ const ShortSummary = ({product}) => {
     return(
         <div>
             <h3>Short summary</h3>
-            <div className={styles.shortSummary}>
+            {/* <div className={styles.shortSummary}>
                 <img src={product.image} alt={`Image of ${product.name}`} className={styles.smallImage}/>
                 <div className={styles.infoBox}>
                     <h3>{product.name}</h3>
@@ -14,7 +14,7 @@ const ShortSummary = ({product}) => {
                     <p>{product.category}</p>
                     <p to={`/product/${product.name}`}>Read more</p>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
