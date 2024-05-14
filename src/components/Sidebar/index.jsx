@@ -2,12 +2,16 @@ import { Link, NavLink } from "react-router-dom";
 import { allProducts } from "../../data/data";
 import styles from './Sidebar.module.css'
 
-const Sidebar = ({category, handleCategoryChange}) => {
+const Sidebar = ({category, handleCategoryChange, setSelectedProduct}) => {
+
+    const handleProductClick = (product) => {
+        setSelectedProduct(product);
+    }
 
     const crystalList = () => {
         return allProducts.filter(product => product.category === 'crystal').map(product => (
             <div key={product.name}>
-            <p to={`/product/${product.name}`}>{product.name}</p>
+                <p onClick={(console.log(`${product} clicked`))}>{product.name}</p>
             </div>
         ))
     }
@@ -15,7 +19,7 @@ const Sidebar = ({category, handleCategoryChange}) => {
     const incenseList = () => {
         return allProducts.filter(product => product.category === 'essential oil').map(product => (
             <div key={product.name}>
-                <p to={`/product/${product.name}`}>{product.name}</p>
+                <p>{product.name}</p>
             </div>
         ))
     }
@@ -23,7 +27,7 @@ const Sidebar = ({category, handleCategoryChange}) => {
     const essentialoilsList = () => {
         return allProducts.filter(product => product.category === 'incense').map(product => (
             <div key={product.name}>
-                <p to={`/product/${product.name}`}>{product.name}</p>
+                <p>{product.name}</p>
             </div>
         ))
     }

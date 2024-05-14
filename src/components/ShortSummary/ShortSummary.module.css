@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     padding: 8px;
+    border: 1px solid var(--bright-purple-color);
+    height: 400px;
+    width: 300px;
 }
 
 .smallImage {

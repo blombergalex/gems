@@ -12,6 +12,8 @@ const Layout = () => {
         setCategory(newCategory);
     }, []);
 
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
     return(
         <>
         <Menu className={styles.menuIcon}/>
@@ -21,7 +23,7 @@ const Layout = () => {
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
             </nav>
-        <Sidebar category={category} handleCategoryChange={handleCategoryChange}/> 
+        <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct}/> 
         <Outlet/>
         </>
     )
