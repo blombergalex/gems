@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Layout from './pages/Layout'
+import Intro from './components/Intro';
 import './App.css'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   
   return (
     <>
+      <Intro />
       <Layout selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
     </>
   )

@@ -1,0 +1,21 @@
+.intro {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    color: var(--main-color);
+    background: linear-gradient(180deg, var(--dark-bg), #000);
+    font-family: "poppins", sans-serif;
+}
+
+.lotusContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.introText {
+    text-align: center;
+    font-size: 32px;
+    
+}

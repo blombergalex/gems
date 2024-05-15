@@ -1,6 +1,0 @@
-.frontpage {
-    position: fixed;
-    color: var(--third-color);
-    background: linear-gradient(180deg, var(--main-dark), var(--main-midi));
-    background-color: var(--main-dark);
-}

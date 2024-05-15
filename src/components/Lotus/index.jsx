@@ -10,7 +10,8 @@ const icon = {
   visible: {
     opacity: 1,
     pathLength: 1,
-    fill: "rgba(255, 255, 255, 1)",
+    // fill: "rgba(255, 255, 255, 1)",
+    fill: "var(--main-color)"
   },
 };
 
@@ -31,7 +32,7 @@ export const Lotus = () => (
           fill: { duration: 4, ease: [1, 0, 0.8, 1] },
         }}
         style={{
-            stroke: "#fff",
+            stroke: "var(--main-color)",
             strokeWidth: 2,
             strokeLinejoin: "round",
             strokeLinecap: "round",
