@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './ShortSummary.module.css'
 
-const ShortSummary = ({product}) => {
+const ShortSummary = ({product, toggleFullSummary}) => {
     console.log(`${product.name} is rendered`)
     return(
         <div className={styles.shortSummary}>
@@ -12,7 +12,8 @@ const ShortSummary = ({product}) => {
                 <p>{product.price}</p>
                 <p>{product.origin}</p>
                 <p>{product.category}</p>
-                <Link to={`/${product.category}/${product.name}`}>Read more</Link>
+                {/* <Link to={`/${product.category}/${product.name}`}>Read more</Link> */}
+                <p onClick={toggleFullSummary}>Read more</p>
             </div>
         </div> 
     )

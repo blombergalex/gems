@@ -3,18 +3,25 @@ import { Menu } from 'lucide-react'
 import { useCallback, useState } from "react"
 import Sidebar from "../../components/Sidebar"
 import ShortSummary from "../../components/ShortSummary"
+import FullSummary from "../../components/FullSummary"
 import WelcomeMessage from "../../components/WelcomeMessage"
 import styles from './Layout.module.css'
 
 const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     const [category, setCategory] = useState('home');
+    const [showFullSummary, setShowFullSummary] = useState(false);
 
     const handleCategoryChange = useCallback((newCategory) => {
         setCategory(newCategory);
         setSelectedProduct(null);
     }, []);
     console.log("Current category:", category);
+
+
+    const toggleFullSummary = () => {
+        setShowFullSummary(!showFullSummary);
+    };
 
     return(
         <>
@@ -27,7 +34,11 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                 </nav>
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct}/>
-                {selectedProduct ? (<ShortSummary product={selectedProduct}/> ) : (<WelcomeMessage category={category}/>)}
+                {selectedProduct && !showFullSummary ? (
+                    <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} /> ) : ( <WelcomeMessage category={category}/> )}
+                {showFullSummary && selectedProduct && (
+                <FullSummary product={selectedProduct}/>
+                )}
             </div>
             <Outlet/>
         </>
