@@ -12,7 +12,7 @@ const ShortSummary = ({product}) => {
                 <p>{product.price}</p>
                 <p>{product.origin}</p>
                 <p>{product.category}</p>
-                <Link to={`/product/${product.name}`}>Read more</Link>
+                <Link to={`/${product.category}/${product.name}`}>Read more</Link>
             </div>
         </div> 
     )
