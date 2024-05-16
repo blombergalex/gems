@@ -1,10 +1,11 @@
 .shortSummary {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 8px;
     border: 1px solid var(--bright-purple-color);
     width: 400px;
-    height: 300px;
+    height: fit-content
 }
 
 .smallImage {
