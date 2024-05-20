@@ -5,6 +5,7 @@ import Sidebar from "../../components/Sidebar"
 import ShortSummary from "../../components/ShortSummary"
 import FullSummary from "../../components/FullSummary"
 import WelcomeMessage from "../../components/WelcomeMessage"
+import scrollToTop from "../../assets/functions"
 import styles from './Layout.module.css'
 
 const Layout = ({selectedProduct, setSelectedProduct}) => {
@@ -20,10 +21,12 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     const toggleFullSummary = () => {
         setShowFullSummary(!showFullSummary);
+        scrollToTop();
     };
 
     const backToShortSummary = () => {
         setShowFullSummary(false);
+        scrollToTop();
     };
 
     return(
