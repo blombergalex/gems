@@ -20,6 +20,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     const toggleFullSummary = () => {
         setShowFullSummary(!showFullSummary);
+        
     };
 
     const backToShortSummary = () => {
@@ -29,19 +30,23 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
     return(
         <>
             <Menu className={styles.menuIcon}/>
-                <nav className={styles.navbar}>
-                    <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => handleCategoryChange('home')} >Home</NavLink>
-                    <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='crystals' onClick={() => handleCategoryChange('crystals')} >Crystals</NavLink>
-                    <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
-                    <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
-                </nav>
+            <nav className={styles.navbar}>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => handleCategoryChange('home')} >Home</NavLink>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='crystals' onClick={() => handleCategoryChange('crystals')} >Crystals</NavLink>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
+            </nav>
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct}/>
                 {selectedProduct && !showFullSummary ? (
-                    <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} /> ) : ( <WelcomeMessage category={category}/> )}
-                {showFullSummary && selectedProduct && (
+                    <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} /> 
+                    ) : null}
+                {showFullSummary && selectedProduct ? (
                 <FullSummary product={selectedProduct} backToShortSummary={backToShortSummary}/>
-                )}
+                ): null}
+                {!selectedProduct && !showFullSummary ? (
+                    <WelcomeMessage category={category}/>
+                ): null}
             </div>
             <Outlet/>
         </>
