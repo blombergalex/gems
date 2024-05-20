@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import scrollToTop from "../../assets/functions";
 import styles from './Sidebar.module.css'
 
-const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct}) => {
+const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct, backToShortSummary}) => {
     useEffect(() => {
         scrollToTop();
       }, [selectedProduct, category]);
@@ -14,11 +14,14 @@ const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedPr
         if (selectedProduct === product && category === product.category) {
             handleCategoryChange(product.category);
             setSelectedProduct(null);
+            backToShortSummary();
         } else if (selectedProduct === product) {
             setSelectedProduct(null);
             handleCategoryChange(home);
+            backToShortSummary();
         } else {
             setSelectedProduct(product);
+            backToShortSummary();
         } 
     };
 
