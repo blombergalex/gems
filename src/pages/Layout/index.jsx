@@ -20,7 +20,6 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     const toggleFullSummary = () => {
         setShowFullSummary(!showFullSummary);
-        
     };
 
     const backToShortSummary = () => {
@@ -37,7 +36,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
             </nav>
             <div className={styles.mainContent}>
-                <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct}/>
+                <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary}/>
                 {selectedProduct && !showFullSummary ? (
                     <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} /> 
                     ) : null}

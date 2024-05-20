@@ -2,17 +2,20 @@ import { Link, NavLink } from "react-router-dom";
 import { allProducts } from "../../data/data";
 import styles from './Sidebar.module.css'
 
-const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct}) => {
+const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct, backToShortSummary}) => {
 
     const handleProductClick = (product) => {
         if (selectedProduct === product && category === product.category) {
             handleCategoryChange(product.category);
             setSelectedProduct(null);
+            backToShortSummary();
         } else if (selectedProduct === product) {
             setSelectedProduct(null);
             handleCategoryChange(home);
+            backToShortSummary();
         } else {
             setSelectedProduct(product);
+            backToShortSummary();
         } 
     };
 
