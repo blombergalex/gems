@@ -1,8 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import { allProducts } from "../../data/data";
+import { useEffect } from "react";
+import scrollToTop from "../../assets/functions";
 import styles from './Sidebar.module.css'
 
 const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct, backToShortSummary}) => {
+    useEffect(() => {
+        scrollToTop();
+      }, [selectedProduct, category]);
+
 
     const handleProductClick = (product) => {
         if (selectedProduct === product && category === product.category) {
