@@ -12,7 +12,6 @@ const ShortSummary = ({product, toggleFullSummary}) => {
                 <p>{product.price}</p>
                 <p>{product.origin}</p>
                 <p>{product.category}</p>
-                {/* <Link to={`/${product.category}/${product.name}`}>Read more</Link> */}
                 <p onClick={toggleFullSummary}>Read more</p>
             </div>
         </div> 

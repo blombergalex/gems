@@ -15,12 +15,15 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
     const handleCategoryChange = useCallback((newCategory) => {
         setCategory(newCategory);
         setSelectedProduct(null);
+        setShowFullSummary(false);
     }, []);
-    console.log("Current category:", category);
-
 
     const toggleFullSummary = () => {
         setShowFullSummary(!showFullSummary);
+    };
+
+    const backToShortSummary = () => {
+        setShowFullSummary(false);
     };
 
     return(
@@ -37,7 +40,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                 {selectedProduct && !showFullSummary ? (
                     <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} /> ) : ( <WelcomeMessage category={category}/> )}
                 {showFullSummary && selectedProduct && (
-                <FullSummary product={selectedProduct}/>
+                <FullSummary product={selectedProduct} backToShortSummary={backToShortSummary}/>
                 )}
             </div>
             <Outlet/>
