@@ -14,6 +14,7 @@ const MobileNavigation = ({handleCategoryChange}) => {
 
     const closeMenu = () => {
         setShowNavItems(false)
+        
     }
 
     document.addEventListener('click', (event) => {
