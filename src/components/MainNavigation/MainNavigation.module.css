@@ -1,0 +1,88 @@
+.navbar {
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.navItemsContainer a {
+    width: 100%;
+    text-align: center;
+    animation: fadeInWords ease-in-out 1s forwards;
+}
+
+.navItemsContainer a,
+.navItemsContainer a:visited {
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+    transition: color  0.5s;
+    margin: 15px;
+}
+
+.navItemsContainer a.active{
+    background-color: var(--main-dark);
+    border-radius: 2px;
+    color: #fff;
+}
+
+.navItemsContainer a:hover{
+    color: #fff;
+}
+
+.navItemsContainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.menuIcon {
+    align-self: flex-end;
+}
+
+.closeMenuIcon {
+    z-index: 1;
+    background-color: var(--main-color);
+}
+
+@keyframes fadeInWords {
+    from {
+      opacity: 0;
+      transform: translateY(-300px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutWords {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        height: min-content;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .navItemsContainer a {
+        width: fit-content;
+    }
+
+}
