@@ -3,6 +3,8 @@
     background-color: var(--main-color);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
 }
 
 .navbar a,
@@ -26,4 +28,25 @@
 
 .menuIcon {
     align-self: flex-end;
+}
+
+.menuIcon {
+    align-self: center;
+}
+
+.closeMenuIcon {
+    border: 1px solid red;
+    z-index: 1;
+    background-color: var(--main-color);
+    position: relative;
+    right: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        height: min-content;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
 }
