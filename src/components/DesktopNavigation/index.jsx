@@ -1,43 +1,21 @@
 import { Menu, X } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { useState, useRef } from 'react'
-import styles from './MainNavigation.module.css'
+import styles from './DesktopNavigation.module.css'
 
-const MainNavigation = ({handleCategoryChange}) => {
-
-    const [showNavItems, setShowNavItems] = useState(false);
-    const navItemsContainer = useRef(null);
-    
-    const handleMenuClick = () => {
-        setShowNavItems(!showNavItems)
-    }
-
-    const closeMenu = () => {
-        setShowNavItems(false)
-    }
-
-    document.addEventListener('click', (event) => {
-        if (showNavItems && !navItemsContainer?.current?.contains(event.target)) {
-            closeMenu();
-        }
-    });
-
+const DesktopNavigation = ({handleCategoryChange}) => {
     return(
         <>
         <nav className={styles.navbar}>
-            {showNavItems &&
             <div className={styles.navItemsContainer}>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => handleCategoryChange('home')} >Home</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='crystals' onClick={() => handleCategoryChange('crystals')} >Crystals</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
-                <X className={styles.closeMenuIcon}/>
             </div>
-            }
-            <Menu onClick={handleMenuClick} ref={navItemsContainer} className={styles.menuIcon}/>
         </nav>
         </>
     )
 }
 
-export default MainNavigation
+export default DesktopNavigation
