@@ -26,13 +26,13 @@ const MainNavigation = ({handleCategoryChange}) => {
         <>
         <nav className={styles.navbar}>
             {showNavItems &&
-            <>
+            <div className={styles.navItemsContainer}>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => handleCategoryChange('home')} >Home</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='crystals' onClick={() => handleCategoryChange('crystals')} >Crystals</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
                 <X className={styles.closeMenuIcon}/>
-            </>
+            </div>
             }
             <Menu onClick={handleMenuClick} ref={navItemsContainer} className={styles.menuIcon}/>
         </nav>
