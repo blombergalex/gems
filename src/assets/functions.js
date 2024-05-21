@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 export const scrollToTop = () => {
     const scrollStep = -window.scrollY / (300 / 15);
     const scrollInterval = setInterval(() => {
@@ -9,4 +11,19 @@ export const scrollToTop = () => {
     }, 15);
 };
 
-export default scrollToTop;
+export default scrollToTop
+
+export const useViewport = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+    
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  return { width };
+}
