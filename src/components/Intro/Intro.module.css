@@ -21,7 +21,17 @@
 .introText {
     text-align: center;
     font-size: 32px;
+    animation: fadeIn ease-in-out 3s forwards;
 }
+
+@keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 100;
+        }
+    }
 
 @media screen and (min-width: 768px) {
     .lotusContainer {

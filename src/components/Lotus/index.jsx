@@ -29,7 +29,7 @@ export const Lotus = () => (
         animate="visible"
         transition={{
           default: { duration: 2, ease: "easeInOut" },
-          fill: { duration: 4, ease: [1, 0, 0.8, 1] },
+          fill: { duration: 2.5, ease: [1, 0, 0.8, 1] },
         }}
         style={{
             stroke: "var(--main-color)",
