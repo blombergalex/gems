@@ -1,0 +1,24 @@
+.navItemsContainer {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: flex-end;
+    height: min-content;
+}
+.navItemsContainer a,
+.navItemsContainer a:visited {
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+    transition: color  0.5s;
+}
+
+.navItemsContainer a.active{
+    background-color: var(--main-dark);
+    border-radius: 2px;
+    color: #fff;
+    transition: background-color 1s ease-in-out;
+}
+
+.navItemsContainer a:hover{
+    color: #fff;
+}

@@ -21,14 +21,11 @@
     margin: 15px;
 }
 
-.navItemsContainer a.active{
+.navItemsContainer a.active {
     background-color: var(--main-dark);
     border-radius: 2px;
     color: #fff;
-}
-
-.navItemsContainer a:hover{
-    color: #fff;
+    transition: background-color 1s ease-in-out;
 }
 
 .navItemsContainer {
@@ -72,17 +69,4 @@
         opacity: 0;
         transform: translateY(-300px);
     }
-}
-
-@media screen and (min-width: 768px) {
-    .navbar {
-        height: min-content;
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .navItemsContainer a {
-        width: fit-content;
-    }
-
 }

@@ -1,9 +1,9 @@
 import { Menu, X } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { useState, useRef } from 'react'
-import styles from './MainNavigation.module.css'
+import styles from './MobileNavigation.module.css'
 
-const MainNavigation = ({handleCategoryChange}) => {
+const MobileNavigation = ({handleCategoryChange}) => {
 
     const [showNavItems, setShowNavItems] = useState(false);
     const navItemsContainer = useRef(null);
@@ -40,4 +40,4 @@ const MainNavigation = ({handleCategoryChange}) => {
     )
 }
 
-export default MainNavigation
+export default MobileNavigation
