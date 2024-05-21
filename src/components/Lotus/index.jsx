@@ -10,7 +10,7 @@ const icon = {
   visible: {
     opacity: 1,
     pathLength: 1,
-    // fill: "rgba(255, 255, 255, 1)",
+    fill: "rgba(255, 255, 255, 1)",
     fill: "var(--main-color)"
   },
 };
@@ -19,7 +19,7 @@ export const Lotus = () => (
   <div className="container">
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
+      viewBox="0 0 512 450"
       className="item"
     >
       <motion.path
@@ -38,6 +38,7 @@ export const Lotus = () => (
             strokeLinecap: "round",
           }}
       />
+      
     </motion.svg>
   </div>
 );

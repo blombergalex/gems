@@ -4,10 +4,10 @@ import { Lotus } from '../Lotus';
 const Intro = () => {
     return(
         <div className={styles.intro}>
-            {/* <div className={styles.lotusContainer}> */}
-                <Lotus />
-            {/* </div> */}
-                <p className={styles.introText}>Zen Gem Haven</p>
+            <div className={styles.lotusContainer}>
+                <Lotus className={styles.lotus}/>
+            </div>
+            <p className={styles.introText}>Zen Gem Haven</p>
         </div>
     )
 }
