@@ -2,13 +2,8 @@
     display: flex;
 }
 
-@media screen and (min-width: 600px) {
-    
+@media (hover:hover) and (pointer:fine) {
     a:hover {
         cursor: pointer;
     }
-
-    /* .navbar {
-        display: none;
-    } */
 }
