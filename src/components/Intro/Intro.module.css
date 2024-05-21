@@ -24,9 +24,8 @@
     animation: fadeIn ease-in-out 3s forwards;
 }
 
-.intro.fadeOut {
+.fadeOut {
     animation: fadeOut ease-in-out 1s forwards;
-    /* display: none; */
 }
 
 @keyframes fadeIn {
