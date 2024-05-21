@@ -6,6 +6,18 @@
     font-size: 20px;
 }
 
+.navItemsContainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
 .navItemsContainer a {
     width: 100%;
     text-align: center;
@@ -28,17 +40,6 @@
     transition: background-color 1s ease-in-out;
 }
 
-.navItemsContainer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: var(--main-color);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 40px;
-}
 
 .menuIcon {
     align-self: flex-end;
@@ -47,6 +48,10 @@
 .closeMenuIcon {
     z-index: 1;
     background-color: var(--main-color);
+}
+
+.fadeOut {
+    animation: fadeOutWords 1s ease-in-out forwards;
 }
 
 @keyframes fadeInWords {
