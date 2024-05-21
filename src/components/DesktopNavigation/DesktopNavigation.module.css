@@ -22,16 +22,3 @@
 .navItemsContainer a:hover{
     color: #fff;
 }
-
-
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .navItemsContainer a {
-        width: fit-content;
-    }
-
-}
