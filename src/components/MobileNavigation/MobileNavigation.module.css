@@ -28,10 +28,6 @@
     transition: background-color 1s ease-in-out;
 }
 
-.navItemsContainer a:hover{
-    color: #fff;
-}
-
 .navItemsContainer {
     height: 100%;
     width: 100%;
@@ -73,17 +69,4 @@
         opacity: 0;
         transform: translateY(-300px);
     }
-}
-
-@media screen and (min-width: 768px) {
-    .navbar {
-        height: min-content;
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .navItemsContainer a {
-        width: fit-content;
-    }
-
 }

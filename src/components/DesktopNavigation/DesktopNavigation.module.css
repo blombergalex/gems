@@ -1,14 +1,9 @@
-.navbar {
+.navItemsContainer {
     background-color: var(--main-color);
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
     height: min-content;
 }
-
-.navItemsContainer a {
-    text-align: center;
-}
-
 .navItemsContainer a,
 .navItemsContainer a:visited {
     color: #000;
@@ -28,11 +23,6 @@
     color: #fff;
 }
 
-.navItemsContainer {
-    background-color: var(--main-color);
-    display: flex;
-    align-items: center;
-}
 
 @media screen and (min-width: 768px) {
     .navbar {
