@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom"
 import { Menu } from 'lucide-react'
 import { useCallback, useState } from "react"
+import Intro from '../../components/Intro';
 import Sidebar from "../../components/Sidebar"
 import ShortSummary from "../../components/ShortSummary"
 import WelcomeMessage from "../../components/WelcomeMessage"
@@ -18,6 +19,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     return(
         <>
+            <Intro />
             <Menu className={styles.menuIcon}/>
                 <nav className={styles.navbar}>
                     <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => handleCategoryChange('home')} >Home</NavLink>
