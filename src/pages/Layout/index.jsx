@@ -30,7 +30,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     return(
         <>
-        <TopNavigation handleCategoryChange={handleCategoryChange}/>
+            <TopNavigation handleCategoryChange={handleCategoryChange}/>
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary}/>
                 {selectedProduct && !showFullSummary ? (
