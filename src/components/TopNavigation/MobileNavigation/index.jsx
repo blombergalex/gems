@@ -17,7 +17,7 @@ const MobileNavigation = ({handleCategoryChange}) => {
         setTimeout(() => {
             setShowNavItems(false)
             setIsClosing(false);
-        }, 1000);
+        }, 3000);
     };
 
     document.addEventListener('click', (event) => {
@@ -27,7 +27,6 @@ const MobileNavigation = ({handleCategoryChange}) => {
     });
 
     return(
-        <>
         <nav className={styles.navbar}>
             {showNavItems &&
             <div className={`${styles.navItemsContainer} ${isClosing ? styles.fadeOut : ''}`}>
@@ -40,7 +39,6 @@ const MobileNavigation = ({handleCategoryChange}) => {
             }
             <Menu onClick={handleMenuClick} ref={navItemsContainer} className={styles.menuIcon}/>
         </nav>
-        </>
     )
 }
 
