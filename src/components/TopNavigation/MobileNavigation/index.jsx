@@ -17,7 +17,7 @@ const MobileNavigation = ({handleCategoryChange}) => {
         setTimeout(() => {
             setShowNavItems(false)
             setIsClosing(false);
-        }, 3000);
+        }, 2000);
     };
 
     document.addEventListener('click', (event) => {
