@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #c2b7c5;
+  --dull-color: #97899a;
   --main-dark: #40374c;
   --dark-bg: #2e2737;
   --main-midi: #dbd9d7;
@@ -20,6 +21,7 @@ body {
   margin: 0;
   background-color: var(--dark-bg);
   font-family: "Poppins", sans-serif;
+  scrollbar-color: var(--bright-purple-color) grey;
 }
 
 #root {

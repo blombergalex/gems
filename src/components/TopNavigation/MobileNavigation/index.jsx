@@ -10,6 +10,7 @@ const MobileNavigation = ({handleCategoryChange}) => {
     
     const handleMenuClick = () => {
         setShowNavItems(!showNavItems)
+        console.log(showNavItems)
     }
 
     const closeMenu = () => {

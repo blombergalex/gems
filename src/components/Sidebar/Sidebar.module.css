@@ -1,20 +1,21 @@
 .sidebar {
-  border: 0.5px solid var(--bright-purple-color);
-  width: 120px;
-  height: 100%;
+  background-color: var(--main-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  width: 100%;
+  height: 200px;
   padding: 8px;
+  overflow-x: scroll;
+  justify-self: flex-end;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .category {
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--main-color);
+  color: var(--bright-purple-color);
   transition: color 0.5s;
   padding-top: 8px;
-}
-
-.category:hover {
-  color: var(--main-midi);
 }
 
 .sidebar a,
@@ -25,11 +26,24 @@
 .sidebar p {
   text-transform: capitalize;
   padding: 2px 0;
-  color: var(--grey-color);
+  color: var(--main-dark);
   transition: color 0.5s;
 }
 
-.sidebar p:hover {
-  color: var(--main-color);
-  cursor: pointer;
+@media (hover:hover) and (pointer:fine) {
+  .category:hover,
+  .sidebar p:hover {
+    color: var(--dull-color);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    height: 100%;
+    width: 120px;
+    overflow-x: visible;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
