@@ -8,7 +8,6 @@
   justify-self: flex-end;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  /* scrollbar-color: var(--bright-purple-color) grey; */
 }
 
 .category {
@@ -18,7 +17,6 @@
   transition: color 0.5s;
   padding-top: 8px;
 }
-
 
 .sidebar a,
 .sidebar a:visited {
@@ -33,12 +31,9 @@
 }
 
 @media (hover:hover) and (pointer:fine) {
-
-  .category:hover {
-    color: var(--main-midi);
-  }
+  .category:hover,
   .sidebar p:hover {
-    color: var(--main-color);
+    color: var(--dull-color);
     cursor: pointer;
   }
 }
@@ -46,6 +41,9 @@
 @media screen and (min-width: 768px) {
   .sidebar {
     height: 100%;
-    width:120px;
+    width: 120px;
+    overflow-x: visible;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
