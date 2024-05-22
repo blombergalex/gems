@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styles from './ShortSummary.module.css'
 
 const ShortSummary = ({product, toggleFullSummary}) => {
@@ -9,10 +8,10 @@ const ShortSummary = ({product, toggleFullSummary}) => {
             <div className={styles.infoBox}>
                 <h3>{product.name}</h3>
                 <p>{product.shortDescription}</p>
-                <p>{product.price}</p>
-                <p>{product.origin}</p>
-                <p>{product.category}</p>
-                <p onClick={toggleFullSummary}>Read more</p>
+                <p>Origin: {product.origin}</p>
+                <p>{product.price} kr</p>
+                <p>Find more <span>{product.category}</span></p>
+                <p onClick={toggleFullSummary} className={styles.readMore}>Read more</p>
             </div>
         </div> 
     )
