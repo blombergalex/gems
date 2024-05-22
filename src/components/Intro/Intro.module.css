@@ -1,0 +1,57 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    color: var(--main-color);
+    background: linear-gradient(180deg, var(--dark-bg), #000);
+    font-family: "poppins", sans-serif;
+    justify-content: center;
+}
+
+.lotusContainer {
+    align-self: center;
+    width: 90%;
+    max-width: 550px;
+    margin: 0;
+    padding: 0;
+}
+
+.introText {
+    text-align: center;
+    font-size: 32px;
+    animation: fadeIn ease-in-out 3s forwards;
+}
+
+.fadeOut {
+    animation: fadeOut ease-in-out 1s forwards;
+}
+
+@keyframes fadeIn {
+        from {
+            opacity: 0;
+        } to {
+            opacity: 100;
+        }
+    }
+
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    } to {
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .lotusContainer {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .introText {
+        font-size: 22px;
+    }
+}
