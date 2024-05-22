@@ -20,6 +20,7 @@ body {
   margin: 0;
   background-color: var(--dark-bg);
   font-family: "Poppins", sans-serif;
+  scrollbar-color: var(--bright-purple-color) grey;
 }
 
 #root {
