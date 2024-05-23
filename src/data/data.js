@@ -17,7 +17,8 @@ export const crystals = [
         "200", 
         "Promotes clarity of mind and communication.",
         "Celestine is known as the stone of angels, promoting mental clarity, spiritual growth, and communication with divine entities. Its gentle energy brings harmony and balance to the mind, body, and spirit.",
-        "Approx. 50g"
+        "Approx. 50g",
+        "/images/celestine.png"
     ),
     new Product(
         "blue apatite",
@@ -26,7 +27,8 @@ export const crystals = [
         "150",
         "Enhances intuition and personal power.",
         "Blue Apatite is a stone of manifestation, helping to stimulate psychic abilities and enhance communication. It aids in personal development and spiritual attunement, promoting a sense of confidence and self-expression.",
-        "Approx. 30g"
+        "Approx. 30g",
+        "/images/blue-apatite.png"
     ),
     new Product(
         "agate",
@@ -35,7 +37,8 @@ export const crystals = [
         "100",
         "Brings stability and emotional balance.",
         "Agate is a grounding stone that brings stability and emotional balance. It harmonizes yin and yang energies, promoting self-acceptance, confidence, and inner strength.",
-        "Approx. 50g"
+        "Approx. 50g",
+        "/images/agate.png"
     ),
     new Product(
         "rose quartz",
@@ -44,7 +47,8 @@ export const crystals = [
         "180",
         "Promotes love, compassion, and emotional healing.",
         "Rose Quartz is the stone of love, compassion, and emotional healing. It opens the heart chakra, promoting self-love, forgiveness, and deep emotional healing. It radiates a gentle, soothing energy that calms the mind and nurtures the soul.",
-        "Approx. 40g"
+        "Approx. 40g",
+        "/images/rose-quartz.png"
     ),
     new Product(
         "rock crystal",
@@ -53,7 +57,8 @@ export const crystals = [
         "120",
         "Amplifies energy and promotes clarity.",
         "Rock Crystal, also known as Clear Quartz, is a powerful amplifier of energy and intention. It enhances clarity of mind, spiritual awareness, and intuition. It is a versatile stone that can be used for healing, meditation, and manifestation.",
-        "Approx. 60g"
+        "Approx. 60g",
+        "/images/rock-crystal.png"
     )
 ];
 
