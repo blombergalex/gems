@@ -17,12 +17,12 @@
     align-items: center;
     flex-direction: column;
     padding-top: 40px;
+    animation: fadeInWords ease-in-out 1s forwards;
 }
 
 .navItemsContainer a {
     width: 100%;
     text-align: center;
-    animation: fadeInWords ease-in-out 1s forwards;
 }
 
 .navItemsContainer a,
@@ -37,9 +37,9 @@
     border-radius: 2px;
     font-weight: 500;
     color: #fff;
-    transition: background-color 1s ease-in-out;
+    outline: none; 
+    background-color: inherit;
 }
-
 
 .navItemsContainer a:focus { /* attempt remove highligt */
    outline: none; 

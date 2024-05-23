@@ -9,33 +9,27 @@ const MobileNavigation = ({handleCategoryChange}) => {
     const navItemsContainer = useRef(null);
     
     const handleMenuClick = () => {
-        setShowNavItems(!showNavItems)
-        console.log(showNavItems)
+        setShowNavItems(true)     
     }
 
     const closeMenu = () => {
         setIsClosing(true);
+
         setTimeout(() => {
             setShowNavItems(false)
             setIsClosing(false);
-        }, 3000);
+        }, 2000);
     };
-
-    document.addEventListener('click', (event) => {
-        if (showNavItems && !navItemsContainer?.current?.contains(event.target)) {
-            closeMenu();
-        }
-    });
 
     return(
         <nav className={styles.navbar}>
             {showNavItems &&
             <div className={`${styles.navItemsContainer} ${isClosing ? styles.fadeOut : ''}`}>
-                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => handleCategoryChange('home')} >Home</NavLink>
-                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='crystals' onClick={() => handleCategoryChange('crystals')} >Crystals</NavLink>
-                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => handleCategoryChange('essentialoils')} >Essential Oils</NavLink>
-                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => handleCategoryChange('incenses')}>Incenses</NavLink>
-                <X className={styles.closeMenuIcon}/>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => {handleCategoryChange('home'); closeMenu()}} >Home</NavLink>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='crystals' onClick={() => {handleCategoryChange('crystals'); closeMenu()}}>Crystals</NavLink>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='essentialoils' onClick={() => {handleCategoryChange('essentialoils'), closeMenu()}}>Essential Oils</NavLink>
+                <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='incenses' onClick={() => {handleCategoryChange('incenses'), closeMenu()}}>Incenses</NavLink>
+                <X onClick={closeMenu} className={styles.closeMenuIcon}/>
             </div>
             }
             <Menu onClick={handleMenuClick} ref={navItemsContainer} className={styles.menuIcon}/>
