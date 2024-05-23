@@ -70,7 +70,8 @@ export const essentialOils = [
         "150", 
         "Calming and relaxing scent, great for stress relief.",
         "Lavender essential oil is renowned for its calming and relaxing properties. It promotes restful sleep, reduces stress and anxiety, and soothes the mind and body. Its gentle floral aroma makes it a popular choice for aromatherapy and natural healing practices.",
-        "10 ml"
+        "10 ml",
+        "/images/lavender-oil.png"
     ),
     new Product(
         "rosemary",
@@ -79,7 +80,8 @@ export const essentialOils = [
         "120",
         "Invigorating and stimulating scent, aids concentration.",
         "Rosemary essential oil has a fresh, herbaceous scent that invigorates the senses and promotes mental clarity. It stimulates cognitive function, improves memory, and enhances concentration. It is also known for its uplifting and energizing properties.",
-        "15 ml"
+        "15 ml",
+        "/images/rosemary-oil.png"
     ),
     new Product(
         "orange",
@@ -88,7 +90,8 @@ export const essentialOils = [
         "100",
         "Uplifting and refreshing citrus aroma, boosts mood.",
         "Orange essential oil has a bright, uplifting aroma that uplifts the spirit and promotes a positive mood. It is known for its energizing and revitalizing properties, helping to alleviate stress, anxiety, and depression. Its sweet citrus scent also makes it a popular choice for natural cleaning products and air fresheners.",
-        "10 ml"
+        "10 ml",
+        "/images/orange-oil.png"
     ),
     new Product(
         "mint",
@@ -97,7 +100,9 @@ export const essentialOils = [
         "130",
         "Cooling and refreshing scent, aids digestion.",
         "Mint essential oil has a cooling and refreshing aroma that invigorates the senses and promotes mental clarity. It aids digestion, relieves headaches, and alleviates nausea. Its stimulating properties make it a popular choice for aromatherapy and natural healing practices.",
-        "10 ml"
+        "10 ml",
+        "/images/mint-oil.png"
+
     ),
     new Product(
         "tea tree",
@@ -106,7 +111,8 @@ export const essentialOils = [
         "160",
         "Antimicrobial and purifying properties, supports skin health.",
         "Tea Tree essential oil is renowned for its powerful antimicrobial and purifying properties. It supports skin health, soothes minor cuts, burns, and insect bites, and helps to clear acne and blemishes. Its fresh, medicinal aroma makes it a versatile oil for household cleaning and natural skincare.",
-        "10 ml"
+        "10 ml",
+        "/images/teatree-oil.png"
     ),
     new Product(
         "lemon",
@@ -115,7 +121,8 @@ export const essentialOils = [
         "110",
         "Uplifting and energizing citrus scent, promotes detoxification.",
         "Lemon essential oil has a bright, uplifting aroma that energizes the mind and uplifts the spirit. It promotes detoxification, cleanses the body, and supports immune function. Its refreshing scent also helps to alleviate stress, anxiety, and fatigue.",
-        "10 ml"
+        "10 ml",
+        "/images/lemon-oil.png"
     ),
     new Product(
         "eucalyptus",
@@ -124,7 +131,8 @@ export const essentialOils = [
         "140",
         "Clears congestion and supports respiratory health.",
         "Eucalyptus essential oil has a fresh, invigorating aroma that clears congestion and supports respiratory health. It helps to relieve coughs, colds, and sinus congestion, and promotes deep breathing and relaxation. Its antibacterial and antiviral properties make it a popular choice for natural cleaning products and cold remedies.",
-        "10 ml"
+        "10 ml",
+        "/images/eucalyptus-oil.png"
     )
 ];
 
