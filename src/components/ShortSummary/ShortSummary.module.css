@@ -1,16 +1,45 @@
 .shortSummary {
+    font-size: 14px;
+    color: var(--main-midi);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8px;
-    border: 1px solid var(--bright-purple-color);
-    width: 400px;
+    padding: 16px;
+    width: 100%;
     height: fit-content
 }
 
 .smallImage {
     aspect-ratio: 1/1;
     width: 70%;
+    border-radius: 50%;
+    border: 3px solid var(--bright-purple-color);
+    align-content: center;
+    text-align: center;
+}
+
+.shortSummary h3 {
+    color: var(--main-midi);
+    text-transform: uppercase;
+    margin: 8px 0;
+    font-weight: 300;
+}
+
+.shortDescription {
+    font-style: italic;
+}
+
+.shortSummary span {
+    font-weight: 500;
+}
+
+.readMore {
+    border: 0.5px solid var(--bright-purple-color);
+    border-radius: 15px;
+    padding: 2px 4px;
+    width: fit-content;
+    margin-top: 24px;
+    align-self: flex-end;
 }
 
 @media screen and (min-width: 1240px) {
@@ -21,5 +50,13 @@
 
     .smallImage {
         width: 35%;
+    }
+
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .shortSummary span:hover,
+    .readMore:hover {
+        cursor: pointer;
     }
 }
