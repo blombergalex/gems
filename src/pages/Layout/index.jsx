@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react"
+import Intro from '../../components/Intro';
 import TopNavigation from "../../components/TopNavigation"
 import Sidebar from "../../components/Sidebar"
 import ShortSummary from "../../components/ShortSummary"
@@ -30,6 +31,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     return(
         <>
+            <Intro />
             <TopNavigation handleCategoryChange={handleCategoryChange}/>
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary}/>
