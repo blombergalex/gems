@@ -23,6 +23,10 @@ const MobileNavigation = ({handleCategoryChange}) => {
 
     return(
         <nav className={styles.navbar}>
+            <div className={styles.logoContainer}>
+                <img src={'/images/lotus.png'} className={styles.logo}/>
+                <p>Zen Gem Haven</p>
+            </div>
             {showNavItems &&
             <div className={`${styles.navItemsContainer} ${isClosing ? styles.fadeOut : ''}`}>
                 <NavLink className={({ isActive}) => isActive ? styles.active : ''} to='/' onClick={() => {handleCategoryChange('home'); closeMenu()}} >Home</NavLink>

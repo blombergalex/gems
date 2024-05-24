@@ -1,10 +1,25 @@
 .navbar {
     background-color: var(--main-color);
     display: flex;
+    /* flex-direction: row; */
     align-items: center;
-    flex-direction: column;
     font-size: 20px;
     padding: 8px;
+    justify-content: space-between;
+}
+
+.logoContainer {
+    display: flex;
+    height: 25px;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+    margin-right: 4px;
 }
 
 .navItemsContainer {
@@ -47,7 +62,7 @@
 }
 
 .menuIcon {
-    align-self: flex-end;
+    /* align-self: flex-end; */
 }
 
 .closeMenuIcon {
