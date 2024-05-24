@@ -1,9 +1,10 @@
 .shortSummary {
+    display: flex;
     font-size: 14px;
     color: var(--main-midi);
-    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 16px;
     width: 100%;
     height: fit-content
@@ -11,7 +12,7 @@
 
 .smallImage {
     aspect-ratio: 1/1;
-    width: 70%;
+    width: 250px;
     border-radius: 50%;
     border: 3px solid var(--bright-purple-color);
     align-content: center;
@@ -44,14 +45,16 @@
 
 @media screen and (min-width: 1240px) {
     .shortSummary {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: flex-start;
+        align-items: start;
+        padding: 48px;
     }
 
-    .smallImage {
-        width: 35%;
+    .infoBox {
+        margin: 24px;
     }
-
+    
 }
 
 @media (hover:hover) and (pointer:fine) {
