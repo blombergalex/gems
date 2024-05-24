@@ -144,7 +144,8 @@ export const incenses = [
         "80", 
         "Balances energy and promotes relaxation.",
         "Yagra incense is handcrafted in India using traditional methods and natural ingredients. Its unique blend of herbs and resins creates a harmonious aroma that balances energy and promotes relaxation. Ideal for meditation, yoga, and spiritual practices.",
-        "Approx. 60 minutes"
+        "Approx. 60 minutes",
+        "/images/yagra-incense.png"
     ),
     new Product(
         "myrrh",
@@ -153,7 +154,8 @@ export const incenses = [
         "100",
         "Purifies the air and uplifts the spirit.",
         "Myrrh incense has been used since ancient times for its purifying and uplifting properties. It creates a warm, earthy aroma that purifies the air and uplifts the spirit. Ideal for meditation, prayer, and spiritual rituals.",
-        "Approx. 45 minutes"
+        "Approx. 45 minutes",
+        "/images/myrrh-incense.png"
     ),
     new Product(
         "patchouli",
@@ -162,7 +164,8 @@ export const incenses = [
         "90",
         "Grounding and calming scent, enhances creativity.",
         "Patchouli incense has a rich, earthy aroma that grounds the spirit and calms the mind. It enhances creativity, promotes relaxation, and balances emotions. Ideal for meditation, yoga, and creative pursuits.",
-        "Approx. 50 minutes"
+        "Approx. 50 minutes",
+        "/images/patchouli-incense.png"
     ),
     new Product(
         "cedar",
@@ -171,7 +174,9 @@ export const incenses = [
         "110",
         "Purifies the environment and promotes clarity.",
         "Cedar incense has a cleansing and purifying aroma that clears negative energy and promotes mental clarity. It creates a peaceful atmosphere, enhances focus, and supports spiritual growth. Ideal for meditation, prayer, and ritual ceremonies.",
-        "Approx. 60 minutes"
+        "Approx. 60 minutes",
+        "/images/cedar-incense.png"
+    
     ),
     new Product(
         "lily",
@@ -180,7 +185,8 @@ export const incenses = [
         "120",
         "Calming and soothing scent, promotes emotional balance.",
         "Lily incense has a delicate floral aroma that calms the senses and promotes emotional balance. It creates a serene atmosphere, reduces stress and anxiety, and enhances relaxation. Ideal for meditation, relaxation, and aromatherapy.",
-        "Approx. 40 minutes"
+        "Approx. 40 minutes",
+        "/images/lily-incense.png"
     ),
     new Product(
         "frankincense",
@@ -189,7 +195,8 @@ export const incenses = [
         "130",
         "Elevates consciousness and deepens spiritual connection.",
         "Frankincense incense has been used for centuries in spiritual ceremonies for its purifying and elevating properties. It creates a sacred atmosphere, enhances meditation, and deepens spiritual connection. Ideal for prayer, ritual, and spiritual practices.",
-        "Approx. 60 minutes"
+        "Approx. 60 minutes",
+        "/images/frankincense-incense.png"
     ),
     new Product(
         "palo santo",
@@ -198,7 +205,8 @@ export const incenses = [
         "150",
         "Clears negative energy and promotes healing.",
         "Palo Santo incense has a sweet, woody aroma that clears negative energy and promotes healing. It creates a protective shield, purifies the environment, and enhances spiritual awareness. Ideal for energy clearing, meditation, and spiritual rituals.",
-        "Approx. 45 minutes"
+        "Approx. 45 minutes",
+        "/images/palosanto-incense.png"
     )
 ];
 
