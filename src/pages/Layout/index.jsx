@@ -31,7 +31,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     return(
         <>
-            {/* <Intro /> */}
+            <Intro />
             <TopNavigation handleCategoryChange={handleCategoryChange}/>
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary}/>
