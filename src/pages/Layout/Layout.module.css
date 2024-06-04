@@ -1,7 +1,3 @@
-.mainContent {
-    display: flex;
-}
-
 @media (hover:hover) and (pointer:fine) {
     a:hover {
         cursor: pointer;

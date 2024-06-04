@@ -1,9 +1,9 @@
 import ContentControl from "../../components/ContentControl"
 
-const Crystals = () => {
+const Home = () => {
     return(
         <ContentControl />
     )
 }
 
-export default Crystals
+export default Home
