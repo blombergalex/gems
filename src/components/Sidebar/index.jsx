@@ -5,11 +5,12 @@ import scrollToTop from "../../assets/functions";
 import styles from './Sidebar.module.css'
 
 const Sidebar = ({category}) => {
+    const handleProductClick = (product) => {
+        console.log('Product clicked:', product)
+    }
     // useEffect(() => {
     //     scrollToTop();
     //   }, [selectedProduct, category]);
-
-
 
     const crystalList = () => {
         return allProducts.filter(product => product.category === 'crystals').map(product => (
@@ -54,19 +55,19 @@ const Sidebar = ({category}) => {
                     </>
                 ) : category === 'crystals' ? (
                     <div>
-                        <Link to='crystals' className={styles.category} onClick={() => handleCategoryChange('crystals')}>Crystals</Link>
+                        <Link to='.' className={styles.category} onClick={() => handleCategoryChange('crystals')}>Crystals</Link>
                         <div>{crystalList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>
                 ) : category === 'essentialoils' ? (
                     <div>
-                        <Link to='essentialoils' className={styles.category} onClick={() => handleCategoryChange('essentialoils')}>Essential Oils</Link>
+                        <Link to='.' className={styles.category} onClick={() => handleCategoryChange('essentialoils')}>Essential Oils</Link>
                         <div>{essentialoilsList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>
                 ) : category === 'incenses' ? (
                     <div>
-                        <Link to='incenses' className={styles.category} onClick={() => handleCategoryChange('incenses')}>Incenses</Link>
+                        <Link to='.' className={styles.category} onClick={() => handleCategoryChange('incenses')}>Incenses</Link>
                         <div>{incenseList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>

@@ -4,7 +4,7 @@ import styles from './ContentControl.module.css'
 
 const ContentControl = () => {
 
-    const [category, setCategory] = useState('home');
+    // const [category, setCategory] = useState('home');
 
     return(
         <div className={styles}>
