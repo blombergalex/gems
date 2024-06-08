@@ -4,27 +4,12 @@ import { useEffect } from "react";
 import scrollToTop from "../../assets/functions";
 import styles from './Sidebar.module.css'
 
-const Sidebar = ({productCategory, setProductCategory}) => {
-    // {category, handleCategoryChange, selectedProduct, setSelectedProduct, backToShortSummary}
-    useEffect(() => {
-        scrollToTop();
-      }, [selectedProduct, category]);
+const Sidebar = () => {
+    // useEffect(() => {
+    //     scrollToTop();
+    //   }, [selectedProduct, category]);
 
 
-    // const handleProductClick = (product) => {
-    //     if (selectedProduct === product && productCategory === product.category) {
-    //         setProductCategory(product.category);
-    //         setSelectedProduct(null);
-    //         backToShortSummary();
-    //     } else if (selectedProduct === ProductCategory) {
-    //         setSelectedProduct(null);
-    //         handleCategoryChange(home);
-    //         backToShortSummary();
-    //     } else {
-    //         setSelectedProduct(product);
-    //         backToShortSummary();
-    //     } 
-    // };
 
     const crystalList = () => {
         return allProducts.filter(product => product.category === 'crystals').map(product => (

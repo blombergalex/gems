@@ -3,11 +3,11 @@ import styles from './ContentControl.module.css'
 
 const ContentControl = () => {
 
-    const [productCategory, setProductCategory] = useState('home');
+    // const [productCategory, setProductCategory] = useState('home');
 
     return(
         <div className={styles}>
-            <Sidebar productCategory={'home'}/>
+            {/* <Sidebar /> */}
         </div>
     )
 }
