@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import scrollToTop from "../../assets/functions";
 import styles from './Sidebar.module.css'
 
-const Sidebar = () => {
+const Sidebar = ({category}) => {
     // useEffect(() => {
     //     scrollToTop();
     //   }, [selectedProduct, category]);
@@ -20,7 +20,7 @@ const Sidebar = () => {
     }
     
     const essentialoilsList = () => {
-        return allProducts.filter(product => product.category === 'incenses').map(product => (
+        return allProducts.filter(product => product.category === 'essentialoils').map(product => (
             <div key={product.name}>
                 <p onClick={() => handleProductClick(product)}>{product.name}</p>
             </div>
@@ -28,7 +28,7 @@ const Sidebar = () => {
     }
 
     const incenseList = () => {
-        return allProducts.filter(product => product.category === 'essentialoils').map(product => (
+        return allProducts.filter(product => product.category === 'incenses').map(product => (
             <div key={product.name}>
                 <p onClick={() => handleProductClick(product)}>{product.name}</p>
             </div>
@@ -61,13 +61,13 @@ const Sidebar = () => {
                 ) : category === 'essentialoils' ? (
                     <div>
                         <Link to='essentialoils' className={styles.category} onClick={() => handleCategoryChange('essentialoils')}>Essential Oils</Link>
-                        <div>{incenseList()}</div>
+                        <div>{essentialoilsList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>
                 ) : category === 'incenses' ? (
                     <div>
                         <Link to='incenses' className={styles.category} onClick={() => handleCategoryChange('incenses')}>Incenses</Link>
-                        <div>{essentialoilsList()}</div>
+                        <div>{incenseList()}</div>
                         <NavLink to='/' className={styles.category} onClick={() => handleCategoryChange('home')}>&#8617;</NavLink>
                     </div>
                 ) : null }

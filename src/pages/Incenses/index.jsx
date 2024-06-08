@@ -1,10 +1,11 @@
 import ContentControl from "../../components/ContentControl"
+import Sidebar from "../../components/Sidebar"
 
 const Incenses = () => {
     return(
         <>
         <ContentControl />
-        <p>Incences</p>
+        <Sidebar category={'incenses'}/>
         </>
     )
 }

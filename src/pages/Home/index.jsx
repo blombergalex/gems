@@ -1,11 +1,12 @@
 import ContentControl from "../../components/ContentControl";
+import Sidebar from "../../components/Sidebar";
 
 const Home = () => {
-    console.log('Home component rendered')
+    
     return(
         <>
         <ContentControl />
-        <p>Home page</p>
+        <Sidebar category={'home'}/>
         </>
     )
 }

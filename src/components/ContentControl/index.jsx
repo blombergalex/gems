@@ -1,13 +1,14 @@
+import { useState } from "react";
 import Sidebar from "../Sidebar";
 import styles from './ContentControl.module.css'
 
 const ContentControl = () => {
 
-    // const [productCategory, setProductCategory] = useState('home');
+    const [category, setCategory] = useState('home');
 
     return(
         <div className={styles}>
-            {/* <Sidebar /> */}
+        
         </div>
     )
 }
