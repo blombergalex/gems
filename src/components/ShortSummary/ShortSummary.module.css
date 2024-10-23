@@ -11,7 +11,8 @@
 
 .smallImage {
     aspect-ratio: 1/1;
-    width: 250px;
+    width: 90%;
+    max-width: 250px;
     border-radius: 50%;
     border: 3px solid var(--bright-purple-color);
     align-content: center;

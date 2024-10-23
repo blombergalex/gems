@@ -87,6 +87,6 @@ const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedPr
                 ) : null }
         </div>
     );
-  };
+};
 
 export default Sidebar;

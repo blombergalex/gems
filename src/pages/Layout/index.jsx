@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react"
 import Intro from '../../components/Intro';
 import TopNavigation from "../../components/TopNavigation"
@@ -23,6 +22,18 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
         setShowFullSummary(false);
     }, []);
 
+    const handlePathChange = () => {
+        if (location.pathname.includes('crystals')) {
+            setCategory('crystals')
+        } else if (
+            location.pathname.includes('incenses')) {
+                setCategory('incenses')
+        } else if (
+            location.pathname.includes('essentialoils')) {
+                setCategory('essentialoils')
+        }
+    }
+
     const toggleFullSummary = () => {
         setShowFullSummary(!showFullSummary);
         scrollToTop();
@@ -46,6 +57,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     useEffect(() => {
         ifHome();
+        handlePathChange();
     }, [location.pathname])
 
     return(

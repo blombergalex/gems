@@ -1,7 +1,6 @@
 import styles from './ShortSummary.module.css'
 
 const ShortSummary = ({product, toggleFullSummary}) => {
-    console.log(`${product.name} is rendered`)
     return(
         <div className={styles.shortSummary}>
             <img src={product.image} alt={`Image of ${product.name}`} className={styles.smallImage}/>

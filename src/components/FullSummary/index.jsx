@@ -5,7 +5,6 @@ const FullSummary = ({product, backToShortSummary}) => {
         <div className={styles.fullSummary}>
             <h3>{product.name}</h3>
             <img src={product.image} alt={`Image of ${product.name}`} className={styles.largeImage}/>
-            {/* <p className={styles.factsTitle}>Facts</p> */}
             <p>- {product.price} kr</p>
             <p>- Found in {product.origin}</p>
             <p>- Part of the {product.category} family</p>

@@ -10,7 +10,6 @@ const MobileNavigation = ({handleCategoryChange}) => {
     
     const handleMenuClick = () => {
         setShowNavItems(true)     
-        console.log('menu icon clicked')
     }
 
     const closeMenu = () => {
