@@ -7,7 +7,7 @@ import styles from './Sidebar.module.css'
 const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct, backToShortSummary}) => {
     useEffect(() => {
         scrollToTop();
-      }, [selectedProduct, category]);
+    }, [selectedProduct, category]);
 
 
     const handleProductClick = (product) => {

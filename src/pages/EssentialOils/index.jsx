@@ -1,6 +1,8 @@
+import Footer from "../../components/Footer"
+
 const EssentialOils = () => {
-    return(
-        <></>
+    return (
+        <Footer category='/essentialoils'/>
     )
 }
 

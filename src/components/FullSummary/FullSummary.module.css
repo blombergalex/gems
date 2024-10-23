@@ -1,0 +1,40 @@
+.fullSummary {
+  display: flex;
+  font-size: 14px;
+  color: var(--main-midi);
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+  height: fit-content
+}
+
+.fullSummary h3 {
+  color: var(--main-midi);
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.factsTitle {
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+.largeImage {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  border-radius: 25%;
+  padding: 10px;
+}
+
+.longDescription {
+  margin-top: 8px;
+}
+
+.goBack {
+  border: 0.5px solid var(--bright-purple-color);
+  border-radius: 15px;
+  padding: 2px 4px;
+  width: fit-content;
+  margin-top: 24px;
+}

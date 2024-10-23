@@ -1,6 +1,8 @@
+import Footer from "../../components/Footer"
+
 const Incenses = () => {
-    return(
-        <></>
+    return (
+        <Footer category="/incenses"/>
     )
 }
 

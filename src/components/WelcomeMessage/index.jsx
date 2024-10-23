@@ -23,8 +23,8 @@ const WelcomeMessage = ({category}) => {
     const message = welcomeMessages[category];
 
     return (
-        <div className="messageContainer">
-            <h3>{message.title}</h3>
+        <div className={styles.messageContainer}>
+            <h4>{message.title}</h4>
             <p>{message.details}</p>
         </div>
     ) 

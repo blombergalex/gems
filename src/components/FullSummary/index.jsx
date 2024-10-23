@@ -4,11 +4,13 @@ const FullSummary = ({product, backToShortSummary}) => {
     return(
         <div className={styles.fullSummary}>
             <h3>{product.name}</h3>
-            <p>{product.longDescription}</p>
-            <p>{product.price} kr</p>
-            <p>Found in {product.origin}</p>
-            <p>Part of the {product.category} family</p>
-            <p onClick={backToShortSummary}>Go back</p>
+            <img src={product.image} alt={`Image of ${product.name}`} className={styles.largeImage}/>
+            {/* <p className={styles.factsTitle}>Facts</p> */}
+            <p>- {product.price} kr</p>
+            <p>- Found in {product.origin}</p>
+            <p>- Part of the {product.category} family</p>
+            <p className={styles.longDescription}>{product.longDescription}</p>
+            <p onClick={backToShortSummary} className={styles.goBack}>Go back</p>
         </div>
     )
 }

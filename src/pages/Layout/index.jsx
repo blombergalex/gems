@@ -1,4 +1,5 @@
-import { useCallback, useState } from "react"
+import { useLocation } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react"
 import Intro from '../../components/Intro';
 import TopNavigation from "../../components/TopNavigation"
 import Sidebar from "../../components/Sidebar"
@@ -7,11 +8,14 @@ import FullSummary from "../../components/FullSummary"
 import WelcomeMessage from "../../components/WelcomeMessage"
 import scrollToTop from "../../assets/functions"
 import styles from './Layout.module.css'
+import { Outlet } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 const Layout = ({selectedProduct, setSelectedProduct}) => {
 
     const [category, setCategory] = useState('home');
     const [showFullSummary, setShowFullSummary] = useState(false);
+    const [isHome, setIsHome] = useState(true);
 
     const handleCategoryChange = useCallback((newCategory) => {
         setCategory(newCategory);
@@ -29,6 +33,21 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
         scrollToTop();
     };
 
+    const ifHome = () => {
+    if (location.pathname.includes('crystals') ||
+        location.pathname.includes('incenses') ||
+        location.pathname.includes('essentialoils')
+    ) {
+        setIsHome(false);
+    } else {
+        setIsHome(true);
+    }
+    }
+
+    useEffect(() => {
+        ifHome();
+    }, [location.pathname])
+
     return(
         <>
             <Intro />
@@ -45,6 +64,10 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                     <WelcomeMessage category={category}/>
                 ): null}
             </div>
+            <Outlet />
+            {isHome && (
+                <Footer category='' />
+            )}
         </>
     )
 }
