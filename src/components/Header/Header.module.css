@@ -1,4 +1,4 @@
-header {
+.header {
   font-size: large;
   color: var(--main-midi);
   background-color: var(--main-dark);
