@@ -45,8 +45,13 @@
 
 .shortSummary a,
 .shortSummary a:visited {
-  text-decoration: none;
-  color: var(--main-midi);
+    text-decoration: none;
+    color: var(--main-midi);
+    width: fit-content;
+}
+
+.shortSummary a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 1240px) {

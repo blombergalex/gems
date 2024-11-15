@@ -1,14 +1,18 @@
+import { Link } from 'react-router-dom';
 import styles from './FullSummary.module.css'
 
 const FullSummary = ({product, backToShortSummary}) => {
+
+    const stringifyCategory = product.category.toString()
+
     return(
         <div className={styles.fullSummary}>
             <h3>{product.name}</h3>
             <img src={product.image} alt={`Image of ${product.name}`} className={styles.largeImage}/>
             <p>- {product.price} kr</p>
             <p>- Found in {product.origin}</p>
-            <p>- Part of the {product.category} family</p>
             <p className={styles.longDescription}>{product.longDescription}</p>
+            <Link to={product.category} className={styles.category} onClick={() => handleCategoryChange({stringifyCategory})}>Part of the {product.category} family</Link>
             <p onClick={backToShortSummary} className={styles.goBack}>Go back</p>
         </div>
     )
