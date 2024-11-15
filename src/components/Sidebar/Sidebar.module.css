@@ -1,7 +1,7 @@
 .sidebar {
   border: 0.5px solid var(--bright-purple-color);
   width: 120px;
-  height: 100%;
+  height: fit-content;
   padding: 8px;
 }
 

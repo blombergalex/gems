@@ -1,9 +1,7 @@
 .footer {
   color: var(--main-midi);
   background-color: var(--main-dark);
-  position: absolute;
   font-size: 0.8rem;
-  bottom: 0;
   display: flex;
   justify-content: center;
   width: 100%;
