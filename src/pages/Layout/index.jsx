@@ -20,7 +20,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
     const handleCategoryChange = useCallback((newCategory) => {
         setCategory(newCategory);
         setSelectedProduct(null);
-        setShowFullSummary(false);
+        setShowFullSummary(false); 
     }, []);
 
     const handlePathChange = () => {
@@ -67,7 +67,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
             <TopNavigation handleCategoryChange={handleCategoryChange}/>
             <Header category={category}/>
             <div className={styles.mainContent}>
-                <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary}/>
+                <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary} setShowFullSummary={setShowFullSummary}/>
                 {selectedProduct && !showFullSummary ? (
                     <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} handleCategoryChange={handleCategoryChange}/> 
                     ) : null}

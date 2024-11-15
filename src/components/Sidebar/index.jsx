@@ -4,20 +4,23 @@ import { useEffect } from "react";
 import scrollToTop from "../../assets/functions";
 import styles from './Sidebar.module.css'
 
-const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct, backToShortSummary}) => {
+const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedProduct, backToShortSummary, setShowFullSummary}) => {
     useEffect(() => {
         scrollToTop();
     }, [selectedProduct, category]);
 
     const handleProductClick = (product) => {
-        if (selectedProduct === product && category === product.category) {
+        if (selectedProduct === product && category === product.category) { // shows product on category page = CORRECT
             handleCategoryChange(product.category);
-            backToShortSummary();
-        } else if (selectedProduct === product && category === "home") {
+            backToShortSummary(); 
+        } else if (selectedProduct === product && category === "home") { // shows home welcome message when same product is clicked from home = CORRECT
             setSelectedProduct(null);
             handleCategoryChange("home");
-            backToShortSummary();
-        } else {
+        } else if (!selectedProduct && category === "home") { // should show product full summary from home
+            // 
+            setSelectedProduct(product)
+            setShowFullSummary(true)
+        } else { // shows short summary
             setSelectedProduct(product);
             backToShortSummary();
         } 
