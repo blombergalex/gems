@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './FullSummary.module.css'
 
-const FullSummary = ({product, backToShortSummary}) => {
+const FullSummary = ({product, backToShortSummary, category}) => {
 
     const stringifyCategory = product.category.toString()
 
@@ -13,7 +13,9 @@ const FullSummary = ({product, backToShortSummary}) => {
             <p>- Found in {product.origin}</p>
             <p className={styles.longDescription}>{product.longDescription}</p>
             <Link to={product.category} className={styles.category} onClick={() => handleCategoryChange({stringifyCategory})}>Part of the {product.category} family</Link>
-            <p onClick={backToShortSummary} className={styles.goBack}>Go back</p>
+            {category !=="home" && (
+                <p onClick={backToShortSummary} className={styles.goBack}>Go back</p>
+            )}
         </div>
     )
 }
