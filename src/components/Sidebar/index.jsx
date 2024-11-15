@@ -9,7 +9,6 @@ const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedPr
         scrollToTop();
     }, [selectedProduct, category]);
 
-
     const handleProductClick = (product) => {
         if (selectedProduct === product && category === product.category) {
             handleCategoryChange(product.category);
