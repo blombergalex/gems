@@ -4,19 +4,25 @@ import styles from './Intro.module.css'
 
 const Intro = () => {
     const [fadeOut, setFadeOut] = useState(false);
-    const [visible, setVisible] = useState(true);
+
+    const [visible, setVisible] = useState(() => {
+        return sessionStorage.getItem('introShown') !== 'true';
+    });
 
     useEffect(() => {
+        if (!visible) return;
+    
         const timer = setTimeout(() => {
             setFadeOut(true);
-            setTimeout(()=> {
+            setTimeout(() => {
                 setVisible(false);
+                sessionStorage.setItem('introShown', 'true');
             }, 1000);
         }, 3000);
-
-        return () => clearTimeout(timer);
-    }, []);
     
+        return () => clearTimeout(timer);
+    }, [visible]);
+
     return(
         visible ? (
         <div className={`${styles.intro} ${ fadeOut ? styles.fadeOut : ''}`}>
