@@ -13,11 +13,10 @@ const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedPr
     const handleProductClick = (product) => {
         if (selectedProduct === product && category === product.category) {
             handleCategoryChange(product.category);
-            setSelectedProduct(null);
             backToShortSummary();
-        } else if (selectedProduct === product) {
+        } else if (selectedProduct === product && category === "home") {
             setSelectedProduct(null);
-            handleCategoryChange(home);
+            handleCategoryChange("home");
             backToShortSummary();
         } else {
             setSelectedProduct(product);
