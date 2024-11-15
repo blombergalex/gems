@@ -1,5 +1,4 @@
 import styles from './Header.module.css'
-import { Lotus } from '../Lotus'
 
 export const Header = ({category}) => {
   return(
