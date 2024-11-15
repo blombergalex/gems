@@ -12,7 +12,7 @@ const FullSummary = ({product, backToShortSummary, category}) => {
             <p>- {product.price} kr</p>
             <p>- Found in {product.origin}</p>
             <p className={styles.longDescription}>{product.longDescription}</p>
-            <Link to={product.category} className={styles.category} onClick={() => handleCategoryChange({stringifyCategory})}>Part of the {product.category} family</Link>
+            <Link to={`/${stringifyCategory}`} className={styles.category} onClick={() => handleCategoryChange(stringifyCategory)}>Part of the {product.category} family</Link>
             {category !=="home" && (
                 <p onClick={backToShortSummary} className={styles.goBack}>Go back</p>
             )}
