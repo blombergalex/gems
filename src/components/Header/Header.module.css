@@ -1,0 +1,16 @@
+header {
+  font-size: large;
+  color: var(--main-midi);
+  background-color: var(--main-dark);
+  width: 100%;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+}
+
+.logo {
+  margin: 10px;
+  justify-self: start;
+}

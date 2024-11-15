@@ -9,6 +9,7 @@ import scrollToTop from "../../assets/functions"
 import styles from './Layout.module.css'
 import { Outlet } from "react-router-dom";
 import Footer from "../../components/Footer";
+import { Header } from "../../components/Header";
 
 const Layout = ({selectedProduct, setSelectedProduct}) => {
 
@@ -64,6 +65,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
         <>
             <Intro />
             <TopNavigation handleCategoryChange={handleCategoryChange}/>
+            <Header category={category}/>
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary}/>
                 {selectedProduct && !showFullSummary ? (
