@@ -69,7 +69,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
             <div className={styles.mainContent}>
                 <Sidebar category={category} handleCategoryChange={handleCategoryChange} setSelectedProduct={setSelectedProduct} selectedProduct={selectedProduct} backToShortSummary={backToShortSummary}/>
                 {selectedProduct && !showFullSummary ? (
-                    <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} /> 
+                    <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} handleCategoryChange={handleCategoryChange}/> 
                     ) : null}
                 {showFullSummary && selectedProduct ? (
                 <FullSummary product={selectedProduct} backToShortSummary={backToShortSummary}/>

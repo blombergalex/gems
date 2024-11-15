@@ -43,6 +43,12 @@
     align-self: flex-end;
 }
 
+.shortSummary a,
+.shortSummary a:visited {
+  text-decoration: none;
+  color: var(--main-midi);
+}
+
 @media screen and (min-width: 1240px) {
     .shortSummary {
         flex-direction: row;
