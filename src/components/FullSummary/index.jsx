@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './FullSummary.module.css'
 
-const FullSummary = ({product, backToShortSummary, category}) => {
+const FullSummary = ({product, backToShortSummary, category, handleCategoryChange}) => {
 
     const stringifyCategory = product.category.toString()
 

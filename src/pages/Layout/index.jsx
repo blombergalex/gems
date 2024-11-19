@@ -72,7 +72,7 @@ const Layout = ({selectedProduct, setSelectedProduct}) => {
                     <ShortSummary product={selectedProduct} toggleFullSummary={toggleFullSummary} handleCategoryChange={handleCategoryChange}/> 
                     ) : null}
                 {showFullSummary && selectedProduct ? (
-                <FullSummary product={selectedProduct} backToShortSummary={backToShortSummary} category={category}/>
+                <FullSummary product={selectedProduct} backToShortSummary={backToShortSummary} handleCategoryChange={handleCategoryChange} category={category}/>
                 ): null}
                 {!selectedProduct && !showFullSummary ? (
                     <WelcomeMessage category={category}/>

@@ -4,3 +4,4 @@ fixa header styling - hänger inte med i Vercel
 Rob tror det har att göra med Link vs a 
 
 
+fix home -> second click on product in sidebar shows short summary
