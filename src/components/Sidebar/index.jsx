@@ -17,7 +17,9 @@ const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedPr
             setSelectedProduct(null);
             handleCategoryChange("home");
         } else if (!selectedProduct && category === "home") { // should show product full summary from home
-            // 
+            setSelectedProduct(product)
+            setShowFullSummary(true)
+        } else if (selectedProduct && category === "home") { // should show product full summary from home
             setSelectedProduct(product)
             setShowFullSummary(true)
         } else { // shows short summary
