@@ -1,5 +1,6 @@
 fixa länkarna - paths blir fel på vercel
 fixa header styling - hänger inte med i Vercel
 
-kolla varför footer styling hänger med men inte header
-  
+Rob tror det har att göra med Link vs a 
+
+
