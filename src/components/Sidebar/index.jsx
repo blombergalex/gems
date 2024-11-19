@@ -10,19 +10,19 @@ const Sidebar = ({category, handleCategoryChange, selectedProduct, setSelectedPr
     }, [selectedProduct, category]);
 
     const handleProductClick = (product) => {
-        if (selectedProduct === product && category === product.category) { // shows product on category page = CORRECT
+        if (selectedProduct === product && category === product.category) { 
             handleCategoryChange(product.category);
             backToShortSummary(); 
-        } else if (selectedProduct === product && category === "home") { // shows home welcome message when same product is clicked from home = CORRECT
+        } else if (selectedProduct === product && category === "home") {
             setSelectedProduct(null);
             handleCategoryChange("home");
-        } else if (!selectedProduct && category === "home") { // should show product full summary from home
+        } else if (!selectedProduct && category === "home") { 
             setSelectedProduct(product)
             setShowFullSummary(true)
-        } else if (selectedProduct && category === "home") { // should show product full summary from home
+        } else if (selectedProduct && category === "home") {
             setSelectedProduct(product)
             setShowFullSummary(true)
-        } else { // shows short summary
+        } else { 
             setSelectedProduct(product);
             backToShortSummary();
         } 
